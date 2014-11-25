@@ -45,10 +45,110 @@
         </ul>
       </section>
       <section>
+        <h2>Require JS</h2>
+        <h3>Define</h3>
+        <pre><code class="language-javascript">define("my/module", function () {
+
+  return {
+    prop: "something",
+    doSomething: function () {}
+  }
+});</code></pre>
+      </section>
+      <section>
+        <h2>Require JS</h2>
+        <h3>Consume</h3>
+        <pre><code class="language-javascript">require(["my/module"], function (myModule) {
+    myModule.doSomething();
+});</code></pre>
+      </section>
+      <section>
+        <h2 class="bullet">Benefits?</h2>
+        <ul>
+          <li>Code is in modules</li>
+          <li>editing on the fly</li>
+        </ul>
+      </section>
+      <section>
+        <h2 class="bullet">Problems?</h2>
+        <ul>
+          <li>Lot of config</li>
+          <li>A lot of boilerplate</li>
+          <li>Can be slow during devs</li>
+          <li>Many libs don't support it</li>
+          <li>Still requires build for production</li>
+          <li>A lot of config!</li>
+        </ul>
+      </section>
+      <section>
+        <h2>CommonJS</h2>
+        <pre><code class="language-javascript">module.exports = {
+  prop: "something",
+  doSomething: function () {}
+}</code></pre>
+      </section>
+      <section>
+        <h2>CommonJS</h2>
+        <pre><code class="language-javascript">var myModule = require('myModule');
+myModule.doSomething();</code></pre>
+      </section>
+      <section>
+        <h2>CommonJS</h2>
+        <h3 class="bullet">Benefits?</h3>
+        <ul>
+          <li>Simplier</li>
+          <li>Less config</li>
+          <li>NPM and (almost) everything in it</li>
+        </ul>
+      </section>
+      <section>
+        <h2>CommonJS</h2>
+        <h3 class="bullet">Problems?</h3>
+        <ul>
+          <li>Requires a compile step</li>
+          <li>Not every NPM module works</li>
+          <li>Sadly, not every lib is in NPM</li>
+        </ul>
+      </section>
+      <section>
+        <h2>ES6</h2>
+        <pre><code class="language-javascript">export default {
+  prop: "something",
+  doSomething: function () {}
+}</code></pre>
+      </section>
+      <section>
+        <h2>ES6</h2>
+        <pre><code class="language-javascript">import myModule from "myModule";
+myModule.doSomething();</code></pre>
+      </section>
+      <section>
+        <h2>ES6</h2>
+        <h3 class="bullet">Benefits?</h3>
+        <ul>
+          <li>Simplier</li>
+          <li>Less config</li>
+          <li>Future proof</li>
+        </ul>
+      </section>
+      <section>
+        <h2>ES6</h2>
+        <h3 class="bullet">Problems?</h3>
+        <ul>
+          <li>Requires a compile step</li>
+          <li>Still new</li>
+          <li>Years away from working in the browser</li>
+        </ul>
+      </section>
+      <section>
         <h2>We still are not testing enough</h2>
       </section>
       <section>
         <h3>Most devs reaction when I say test their JavaScript</h3><iframe src="http://giphy.com/embed/kPMwTWvKadCG4?html5=true" width="480" height="295" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+      </section>
+      <section>
+        <h2>Awesome Tools for testing</h2>
+        <p>TestEm, Karma, Mocha, Chai, PhantomJS,SlimerJS, Casper JS, node, qunit, node-unit, yadda.js  </p>
       </section>
       <section>
         <h3>Some devs can't help but over engineer</h3><iframe src="http://giphy.com/embed/a3f7Sj4db2MYU?html5=true" width="480" height="361" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
@@ -61,17 +161,6 @@
       </section>
       <section>
         <h2>Angular is still a bad idea</h2><iframe src="http://giphy.com/embed/IIjH0wN7F3uzS?html5=true" width="480" height="456" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-      </section>
-      <section>
-        <h2>Syntax Highlighting</h2>
-        <h3>Powered by <a href="http://twitter.com/LeaVerou">Lea Verou</a>'s <a href="https://github.com/LeaVerou/prism">Prism</a></h3>
-        <pre><code class="language-javascript">bespoke.from('article', [
-  classes(),
-  keys(),
-  touch(),
-  bullets('li, .bullet')
-]);
-</code></pre>
       </section>
       <section data-bespoke-hash="the-end">
         <h2>Thanks</h2>
